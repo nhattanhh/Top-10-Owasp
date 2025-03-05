@@ -10,7 +10,7 @@
 
     ![1](imgs/1_1.png)
 
-- This is the most classic case of BAC, imagine a banking application where a regular user can access another user’s account details simply by changing a parameter in the URL, like switching */account?userId=123* to */account?userId=456*. If the application doesn’t verify the request... BOOM! You have successful access user with id 456 whether your id is 123.
+- This is the most classic case of BAC, imagine a banking application where a regular user can access another user’s account details simply by changing a parameter in the URL, like switching `/account?userId=123` to `/account?userId=456`. If the application doesn’t verify the request... BOOM! You have successful access user with id 456 whether your id is 123.
 
 - Broken Access Control occurs due to several underlying issues in the design, implementation, or configuration of an application:
 
