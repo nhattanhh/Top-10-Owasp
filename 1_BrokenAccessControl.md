@@ -2,7 +2,7 @@
 
 - These thing can prove that it's the most critical security vulnerability in web applications.
 
-    ###**Let's talk about it**:
+    **Let's talk about it**:
 - Broken Access Control is a security vulnerability that occurs when an application fails to properly restrict users from accessing resources or performing actions they are not authorized for. In other words, it allows users to bypass access controls and gain unauthorized access to data, functions, or systems.
 
     ![alt text](imgs/1_1.png)
