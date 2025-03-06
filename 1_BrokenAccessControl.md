@@ -4,11 +4,11 @@
 
 - These thing can prove that it's the most critical security vulnerability in web applications.
 
-   ### **Let's talk about it**:
+   ## **Let's talk about it**:
 
 - Broken Access Control is a security vulnerability that occurs when an application fails to properly restrict users from accessing resources or performing actions they are not authorized for. In other words, it allows users to bypass access controls and gain unauthorized access to data, functions, or systems.
 
-    ![1](imgs/1_1.png)
+    ![1_1](imgs/1_1.png)
 
 - This is the most classic case of BAC, imagine a banking application where a regular user can access another user’s account details simply by changing a parameter in the URL, like switching `/account?userId=123` to `/account?userId=456`. If the application doesn’t verify the request... BOOM! You have successful access user with id 456 whether your id is 123.
 
@@ -30,9 +30,10 @@
 
     + Use Least Privilege: Users should be provided minimum privileges for thier missions.
 
-    ![2](imgs/1_2.png)
+    ![2_1](imgs/2_1.png)
 
     + Avoid IDOR(A method that closely to BAC) with python code example:
+
         ```python
         if current_user.id != requested_user_id and not current_user.is_admin:
         return "Access Denied", 403
