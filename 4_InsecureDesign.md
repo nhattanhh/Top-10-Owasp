@@ -25,7 +25,6 @@
     + A website lets anyone see admin pages because it doesn’t check who they are:
         ```text
         User: normal | Role: none → Still opens /admin/dashboard
-
     + Attackers can take control without needing a password.
 
 - No Data Checks:
