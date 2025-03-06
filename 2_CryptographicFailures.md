@@ -4,7 +4,7 @@
 - Cryptographic failures are where attackers often target sensitive data, such as passwords, credit card numbers, and personal information, when you do not properly protect them.This is the root cause of sensitive data exposure.
 
     ## Cryptographic Failures dangerous because:
-- Cryptographic failures are very dangerous because they can let sensitive data get exposed, putting personal details at risk and causing big problems. When encryption systems break down, bad guys can get into protected data, unlock it, and use it for their own benefit.
+- They can let sensitive data get exposed, putting personal details at risk and causing big problems. When encryption systems break down, bad guys can get into protected data, unlock it, and use it for their own benefit.
 
 - One of the biggest dangerous of cryptographic failures is that personal information can get leaked. Both companies and people depend on encryption to keep private stuff—like bank details, health records, and personal IDs—safe. If the encryption fails, this info can be stolen and used in harmful ways.
 
@@ -42,16 +42,16 @@
     ## Preventive Measures:
 - Don’t store sensitive data unnecessarily.
 
-- Ensure up-to-date and strong standard algorithms such as Argon2, scrypt, bcrypt,... protocols, and keys are in place; use proper key management.
+- Ensure up-to-date and strong standard algorithms such as Argon2, scrypt, bcrypt,... protocols: HTTPS, TLS,... , and keys are in place; use proper key management.
 
 - Use tools such as `Qualys SSL Labs` to check TLS configuration.
 
-- Add salt when hash:
-    + Make sure each password has its own salt value to avoid attacking Rainbow Table:
+- Add salt(random variable add to password to make hash differ) when hash:
+    + Make sure each password has its own salt value to avoid attacking Rainbow Table(Table of all hash of passwords):
     ```python
     import bcrypt
     password = "userpassword"
     salt = bcrypt.gensalt()
     hashed = bcrypt.hashpw(password.encode(), salt)
 
-- Store encryption keys in an HSM (Hardware Security Module) or a service like AWS KMS.
+- Store encryption keys in HSM (Hardware Security Module) or a service like AWS KMS.
