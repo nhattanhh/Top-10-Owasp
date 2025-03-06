@@ -1,4 +1,5 @@
-Easy top 10 Owasp in your hand...
+# Basic knowledge and some tips with Top 10 Owasp
+
 1. Broken Access Control
 2. Cryptographic Failures 
 3. Injection
