@@ -40,12 +40,18 @@
 - Privilege escalation: The attacker uses the exposed data to perform other attacks (such as Credential Stuffing).
 
     ## Preventive Measures:
-- Classify data processed, stored, or transmitted by an application.
-
 - Don’t store sensitive data unnecessarily.
 
-- Make sure to encrypt all sensitive data at rest.
-
-- Ensure up-to-date and strong standard algorithms, protocols, and keys are in place; use proper key management.
+- Ensure up-to-date and strong standard algorithms such as Argon2, scrypt, bcrypt,... protocols, and keys are in place; use proper key management.
 
 - Use tools such as `Qualys SSL Labs` to check TLS configuration.
+
+- Add salt when hash:
+    + Make sure each password has its own salt value to avoid attacking Rainbow Table:
+    ```python
+    import bcrypt
+    password = "userpassword"
+    salt = bcrypt.gensalt()
+    hashed = bcrypt.hashpw(password.encode(), salt)
+
+- Store encryption keys in an HSM (Hardware Security Module) or a service like AWS KMS.
