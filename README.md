@@ -9,4 +9,4 @@
 7. Identification and Authentication Failures
 8. Software and Data Integrity Failures
 9. Security Logging and Monitoring Failures
-10. Server-side Request Forgecy
+10. Server-side Request Forgery
